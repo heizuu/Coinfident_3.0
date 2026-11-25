@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the 50/30/20 rule, check your allowance with a free student budget calculator, and find budgeting articles.">
+    <meta name="theme-color" content="#234c3c">
+    <title>Coinfident - Main</title>
+    <link rel="stylesheet" type="text/css" href="css-stylesheets/tester.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <a class="skip-link" href="#calc-main">Skip to main content</a>
+    <div id="sticky-top">
+    <header id="main-header">
+        <div class="container">
+            <a href="home.html" class="brand">
+                <img class="brand-logo" src="images/logo.png" alt="" width="52" height="50">
+                <span class="logo-text">COINFIDENT</span>
+            </a>
+
+            <nav id="navbar">
+                <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="main.html" class="active">MAIN</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+            <nav class="page-jump" aria-label="On this page">
+                <a href="#rule">The rule</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#ratings">How it is rated</a>
+                <a href="#resources">Resources</a>
+            </nav>
+    </div>
+
+    <main id="calc-main">
+        <div class="print-brand">
+            <img src="images/logo.png" alt="" width="64" height="61">
+            <div><strong>Coinfident</strong><span>My 50/30/20 budget result</span></div>
+        </div>
+        <h1>Budget Guide and Calculator</h1>
+        <p class="calc-intro">
+            Learn a simple way to plan your monthly allowance, then check your own budget and find articles that match your result.
+        </p>
+
+
+        <section id="rule" class="calc-section split">
+            <img src="images/budget-rule.svg" alt="Donut chart of the 50/30/20 rule: 50% needs, 30% wants, 20% savings">
+            <div>
+                <h2>The 50/30/20 rule</h2>
+                <p>The 50/30/20 rule splits your money into three parts. It gives you a target to aim for without tracking every peso.</p>
+                <ul>
+                    <li><strong>Needs (50%):</strong> boarding or rent, food, transportation, tuition, school supplies, and load or internet.</li>
+                    <li><strong>Wants (30%):</strong> milk tea, hangouts, subscriptions, games, and shopping.</li>
+                    <li><strong>Savings (20%):</strong> an emergency fund and money for goals such as a laptop or thesis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <h2 id="calculator" class="calc-title">Check your budget</h2>
+        <p class="calc-intro">Enter your allowance and where it goes, then press Check my budget.</p>
+
+        <div id="calc-form">
+            <div class="calc-grid">
+                <div class="calc-card allowance">
+                    <div class="calc-head"><h3>Your allowance</h3></div>
+                    <div class="calc-allow-body">
+                        <div class="calc-allow-input">
+                            <p class="hint">Include everything you receive: allowance from family, scholarship, stipend, or part-time pay.</p>
+                            <div class="calc-period">
+                                <div class="selected">Monthly</div>
+                                <div>Weekly</div>
+                            </div>
+                            <div class="calc-field">
+                                <p class="calc-label" id="allow-label">Total monthly allowance</p>
+                                <div class="calc-money"><input type="number" id="allowance" min="0" step="any" inputmode="decimal" placeholder="0" value="10000" aria-label="Total monthly allowance"></div>
+                            </div>
+                            <p id="allow-note" class="calc-note"></p>
+                        </div>
+                        <div class="calc-side">
+                            <div class="calc-actions">
+                                <button type="button" class="primary">Check my budget</button>
+                                <button type="button" id="calc-reset">Clear</button>
+                            </div>
+                            <div class="calc-balance" aria-live="polite">
+                                <span>Planned: <strong id="bal-planned">&#8369;10,000.00</strong></span>
+                                <span>Allowance left: <strong id="bal-left">&#8369;0.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="calc-error" class="calc-error" role="alert"></p>
+                </div>
+
+                <div id="calc-summary" class="calc-summary">
+                <div id="calc-verdict" class="calc-verdict good">
+                    <span class="calc-badge" id="verdict-badge">Good</span>
+                    <div><h2 id="verdict-title">Overall rating: Good</h2><p id="verdict-text">Your budget is in line with the 50/30/20 rule. Keep it up.</p></div>
+                </div>
+
+                <div class="calc-bars">
+                    <h3>Your budget vs. the 50/30/20 target</h3>
+                    <div class="calc-bar-label">Your budget</div>
+                    <div class="calc-bar" id="bar-yours"><span class="b-needs" style="width:50%">50%</span><span class="b-wants" style="width:30%">30%</span><span class="b-save" style="width:20%">20%</span></div>
+                    <div class="calc-bar-label">Target</div>
+                    <div class="calc-bar">
+                        <span class="b-needs w50">Needs 50%</span>
+                        <span class="b-wants w30">Wants 30%</span>
+                        <span class="b-save w20">Savings 20%</span>
+                    </div>
+                </div>
+
+                <div class="calc-advice">
+                    <h3>What to adjust</h3>
+                    <ul id="advice-list"><li>Needs, wants, and savings are all on target. Check again whenever your allowance changes.</li></ul>
+                </div>
+
+                <div class="calc-resources">
+                    <h2 id="res-title">Sustain and grow</h2>
+                    <ul id="res-list">
+                <li><a href="https://www.britannica.com/money/what-is-the-50-30-20-rule" target="_blank" rel="noopener noreferrer">Using the 50-30-20 Rule to Power Your Household Budget (Britannica)</a></li>
+                <li><a href="https://www.maya.ph/stories/5-ways-starting-to-save-as-a-student-sets-you-up-for-future-success" target="_blank" rel="noopener noreferrer">5 Ways Starting to Save as a Student Sets You Up for Future Success (Maya)</a></li>
+                <li><a href="https://www.bsp.gov.ph/SitePages/MediaAndResearch/FinEd_LearnersAndEducators.aspx" target="_blank" rel="noopener noreferrer">More financial education videos (BSP)</a></li>
+            </ul>
+                </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <section id="calc-results">
+            <div class="calc-table-wrap">
+                <table class="calc-table">
+                    <thead><tr><th>Category</th><th>Your amount</th><th>Share of allowance</th><th>Target</th><th>Rating</th></tr></thead>
+                    <tbody id="calc-table-body">
+                        <tr><td>Needs</td><td>&#8369;5,000.00</td><td>50.0%</td><td>50% or less</td><td><span class="calc-tag good">Good</span></td></tr>
+                        <tr><td>Wants</td><td>&#8369;3,000.00</td><td>30.0%</td><td>30% or less</td><td><span class="calc-tag good">Good</span></td></tr>
+                        <tr><td>Savings</td><td>&#8369;2,000.00</td><td>20.0%</td><td>20% or more</td><td><span class="calc-tag good">Good</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="ratings" class="calc-section">
+            <h2>How your budget is rated</h2>
+            <p>Each category is rated on its own. Your overall rating is the lowest of the three, and planning to spend more than your allowance is always Poor.</p>
+            <ul>
+                <li><strong>Good:</strong> needs at 50% or less, wants at 30% or less, and savings at 20% or more.</li>
+                <li><strong>Medium:</strong> needs up to 60%, wants up to 40%, and savings at 10% or more.</li>
+                <li><strong>Poor:</strong> anything beyond those limits.</li>
+            </ul>
+        </section>
+
+        <section id="inputs-section" class="calc-section">
+            <h2>Adjust your numbers</h2>
+            <div id="inputs-slot" class="calc-grid">
+                <div id="calc-inputs" class="calc-inputs">
+                <div class="calc-card needs">
+                    <div class="calc-head"><h3>Needs</h3><p class="calc-sub" id="sub-needs">&#8369;5,000.00</p></div>
+                        <p class="hint">Things you can't skip.</p>
+                        <div class="calc-field"><p class="calc-label">Boarding, rent, utilities</p><div class="calc-money"><input aria-label="Boarding, rent, utilities" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="2500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Groceries and basic meals</p><div class="calc-money"><input aria-label="Groceries and basic meals" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="1500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Transportation</p><div class="calc-money"><input aria-label="Transportation" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Tuition, school supplies, printing</p><div class="calc-money"><input aria-label="Tuition, school supplies, printing" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="300"></div></div>
+                        <div class="calc-field"><p class="calc-label">Load and internet</p><div class="calc-money"><input aria-label="Load and internet" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="200"></div></div>
+                        <div class="calc-field"><p class="calc-label">Other required costs</p><div class="calc-money"><input aria-label="Other required costs" type="number" class="need" min="0" step="any" inputmode="decimal" placeholder="0" value="0"></div></div>
+                </div>
+
+                <div class="calc-card wants">
+                    <div class="calc-head"><h3>Wants</h3><p class="calc-sub" id="sub-wants">&#8369;3,000.00</p></div>
+                        <p class="hint">Things that are nice to have.</p>
+                        <div class="calc-field"><p class="calc-label">Eating out, milk tea, coffee</p><div class="calc-money"><input aria-label="Eating out, milk tea, coffee" type="number" class="want" min="0" step="any" inputmode="decimal" placeholder="0" value="1000"></div></div>
+                        <div class="calc-field"><p class="calc-label">Entertainment and hangouts</p><div class="calc-money"><input aria-label="Entertainment and hangouts" type="number" class="want" min="0" step="any" inputmode="decimal" placeholder="0" value="800"></div></div>
+                        <div class="calc-field"><p class="calc-label">Subscriptions and games</p><div class="calc-money"><input aria-label="Subscriptions and games" type="number" class="want" min="0" step="any" inputmode="decimal" placeholder="0" value="500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Shopping (clothes, gadgets, online orders)</p><div class="calc-money"><input aria-label="Shopping (clothes, gadgets, online orders)" type="number" class="want" min="0" step="any" inputmode="decimal" placeholder="0" value="500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Other wants</p><div class="calc-money"><input aria-label="Other wants" type="number" class="want" min="0" step="any" inputmode="decimal" placeholder="0" value="200"></div></div>
+                </div>
+
+                <div class="calc-card savings">
+                    <div class="calc-head"><h3>Savings</h3><p class="calc-sub" id="sub-savings">&#8369;2,000.00</p></div>
+                        <p class="hint">Money you set aside each month.</p>
+                        <div class="calc-field"><p class="calc-label">Savings and emergency fund</p><div class="calc-money"><input aria-label="Savings and emergency fund" type="number" class="save" min="0" step="any" inputmode="decimal" placeholder="0" value="1500"></div></div>
+                        <div class="calc-field"><p class="calc-label">Goals (laptop, thesis, trip)</p><div class="calc-money"><input aria-label="Goals (laptop, thesis, trip)" type="number" class="save" min="0" step="any" inputmode="decimal" placeholder="0" value="500"></div></div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="calc-section calc-links">
+            <h2>Helpful resources</h2>
+            <p>These links open on other websites. Start with the group that matches your rating.</p>
+
+            <h3>If your rating is Poor: get back on track</h3>
+            <ul id="res-poor">
+                <li><a href="https://bukas.ph/blog/tipid-tips-for-filipino-students/" target="_blank" rel="noopener noreferrer">8 Tipid Tips for Filipino Students (Bukas)</a></li>
+                <li><a href="https://www.mmdc.mcl.edu.ph/news-and-events/lifestyle-career-tips/how-to-budget-according-to-a-working-student/" target="_blank" rel="noopener noreferrer">How to Budget According to a Working Student (MMDC)</a></li>
+                <li><a href="https://www.bsp.gov.ph/SitePages/MediaAndResearch/FinEd_LearnersAndEducators.aspx" target="_blank" rel="noopener noreferrer">Financial education videos on saving, budgeting, debt, and scams (BSP)</a></li>
+            </ul>
+
+            <h3>If your rating is Medium: keep improving</h3>
+            <ul id="res-medium">
+                <li><a href="https://www.maya.ph/stories/5-smart-saving-tips-every-filipino-student-should-know" target="_blank" rel="noopener noreferrer">5 Smart Saving Tips Every Filipino Student Should Know (Maya)</a></li>
+                <li><a href="https://www.citizensbank.com/learning/how-to-build-emergency-fund-college.aspx" target="_blank" rel="noopener noreferrer">How to Build an Emergency Fund for College Students (Citizens)</a></li>
+                <li><a href="https://bukas.ph/5-good-finlit-habits-for-students" target="_blank" rel="noopener noreferrer">5 Good Financial Literacy Habits for Students (Bukas)</a></li>
+            </ul>
+
+            <h3>If your rating is Good: sustain and grow</h3>
+            <ul id="res-good">
+                <li><a href="https://www.britannica.com/money/what-is-the-50-30-20-rule" target="_blank" rel="noopener noreferrer">Using the 50-30-20 Rule to Power Your Household Budget (Britannica)</a></li>
+                <li><a href="https://www.maya.ph/stories/5-ways-starting-to-save-as-a-student-sets-you-up-for-future-success" target="_blank" rel="noopener noreferrer">5 Ways Starting to Save as a Student Sets You Up for Future Success (Maya)</a></li>
+                <li><a href="https://www.bsp.gov.ph/SitePages/MediaAndResearch/FinEd_LearnersAndEducators.aspx" target="_blank" rel="noopener noreferrer">More financial education videos (BSP)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <img class="footer-logo" src="images/bsu-logo.png" alt="Batangas State University seal" width="76" height="76">
+        <div class="footer-text">
+            <p>Batangas State University - The NEU Alangilan</p>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="home.html">Home</a><span aria-hidden="true">&middot;</span><a href="main.html">Main</a><span aria-hidden="true">&middot;</span><a href="contact.html">Contact</a>
+            </nav>
+            <p class="footer-brand">Coinfident</p>
+        </div>
+    </footer>
+</body>
+</html>
